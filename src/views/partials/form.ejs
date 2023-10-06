@@ -1,0 +1,28 @@
+<!-- FORMULARIO -->
+<%-include("../partials/head"); %>
+<section class="seccion">
+    <form class="form contacto" id="Contacto" onsubmit="login(); return false;">
+      
+      <h2 class="form__title">Iniciar sesion</h2>
+      <div class="form__container">
+        <div class="form__group">
+          <input type="text" id="name" class="form__input" name="name" required placeholder=" " />
+          <label for="name" id="assa" class="form__label">nombre</label>
+          <spam class="form__line"></spam>
+        </div>
+        <div class="form__group">
+          <input type="text" id="email" class="form__input" name="email" required placeholder=" " />
+          <label for="email" class="form__label">email</label>
+          <spam class="form__line"></spam>
+        </div>
+        <div class="form__group">
+          <input type="password" id="password" class="form__input" name="password" required placeholder=" " />
+          <label for="password" class="form__label">password</label>
+          <spam class="form__line"></spam>
+        </div>
+        <input type="submit" class="form__submit" value="ingresar">
+        <a href="/registro" class="form__a">registrarse</a>
+      </div>
+      </div>
+    </form>
+</section>

@@ -1,0 +1,34 @@
+<% if(ClienteAutenticado !=undefined) {%> <% ClienteAutenticado.clientes.forEach((cliente)=>{ %>
+<div>
+  <a onclick="ver('<%=cliente._id%>')" class="btn btn-primary">
+    <div class="card" style="width: 18rem">
+      <img src="https://placehold.co/200x200/png" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">Nombre: <%=cliente.nombre%></h5>
+        <p class="card-text">Calle: <%=cliente.direccion%></p>
+        <p class="card-text">Altura: <%=cliente.Altura%></p>
+        <p class="card-text">Descripcion: <%=cliente.descripcion%></p>
+      </div>
+    </div>
+  </a>
+  <div id="CargarDeuda<%=cliente._id%>"></div>
+  <div id="C<%=cliente._id%>"></div>
+  <form id="formCargaProducto" onsubmit="debe(`<%=cliente._id%>`); return false;">
+    <label for="UpDeudaProducto<%=cliente._id%>">producto</label>
+    <input id="UpDeudaProducto<%=cliente._id%>" type="search" name="UpDeudaProducto<%=cliente._id%>" required placeholder="ingrese el roducto" />
+
+    <label for="UpDeudaPrecio<%=cliente._id%>">precio</label>
+    <input type="text" id="UpDeudaPrecio<%=cliente._id%>" name="UpDeudaPrecio<%=cliente._id%>" required placeholder="ingrese el precio" />
+    <button id="prodId<%=cliente._id%>" type="submit" value="">cargar</button>
+  </form>
+
+  <form onsubmit="monto(`<%=cliente._id%>`); return false;">
+    <label for="pagoDeudaProducto">monto</label>
+    <input id="pagoDeudaProducto" type="search" name="pagoDeudaProducto" required placeholder="ingrese el monto" />
+    <button type="submit" value="">cargar</button>
+  </form>
+  <button onclick="eliminarCliente(`<%=cliente._id%>`)">Eliminar Cliente</button>
+</div>
+<% } ) %> <% }else{ %>
+<h2>no hay clientes</h2>
+<%}%>

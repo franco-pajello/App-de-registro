@@ -1,0 +1,42 @@
+<%-include("../partials/head"); %>
+  <section class="seccion">
+    <form class="form contacto" id="Contacto" method="post" action="/registro">
+
+      <h2 class="form__title">Registro</h2>
+      <div class="form__container">
+        <div class="form__group">
+          <input type="text" id="name" class="form__input" name="username" required placeholder=" " />
+          <label for="username" class="form__label">nombre</label>
+          <spam class="form__line"></spam>
+        </div>
+        <div class="form__group">
+          <input type="text" id="email" class="form__input" name="email" required placeholder=" " />
+          <label for="email" class="form__label">email</label>
+          <spam class="form__line"></spam>
+        </div>
+        <div class="form__group">
+          <input type="text" id="direccion" class="form__input" name="direccion" required placeholder=" " />
+          <label for="direccion" class="form__label">direccion</label>
+          <spam class="form__line"></spam>
+        </div>
+        <div class="form__group">
+          <input type="number" id="altura" class="form__input" name="altura" required placeholder=" " />
+          <label for="altura" class="form__label">altura</label>
+          <spam class="form__line"></spam>
+        </div>
+        <div class="form__group">
+          <input type="tel" id="telefono" class="form__input" name="telefono" required placeholder=" " />
+          <label for="telefono" class="form__label">telefono</label>
+          <spam class="form__line"></spam>
+        </div>
+        <div class="form__group">
+          <input type="password" id="password" class="form__input" name="password" required placeholder=" " />
+          <label for="password" class="form__label">password</label>
+          <spam class="form__line"></spam>
+        </div>
+        <input type="submit" class="form__submit" value="registrarse">
+        <a href="/" class="form__a">login</a>
+      </div>
+      </div>
+    </form>
+  </section>
